@@ -1,0 +1,112 @@
+/* Global styles */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #111;
+  color: white;
+}
+
+/* CSS variables */
+:root {
+  --columns: 3;
+  --radius: 0.5em;
+  --mapHeight: 3.5em;
+  --mapWidth: 75%;
+  --lineWidth: 0.25em;
+  --lineColor: rgba(255, 255, 255, 0.5);
+}
+
+/* Map Wrapper */
+.mapWrapper {
+  position: absolute;
+  width: var(--mapWidth);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* Center horizontally and vertically */
+}
+
+/* Rows */
+.mapWrapper .row {
+  position: relative;
+  width: 100%;
+  height: calc(2 * var(--mapHeight));
+}
+
+/* Item Bars */
+.mapWrapper .row .itemBar {
+  position: relative;
+  display: inline-block;
+  width: calc(100% / var(--columns));
+  height: var(--lineWidth);
+  margin-top: calc(2 * var(--mapHeight) - var(--lineWidth) / 2);
+  background: var(--lineColor);
+}
+
+/* Item Info */
+.mapWrapper .row .itemInfo {
+  position: absolute;
+  width: 100%;
+  bottom: calc(2 * var(--lineWidth));
+  text-align: center;
+}
+
+.mapWrapper .row .itemInfo:after {
+  content: '';
+  position: absolute;
+  width: calc(2 * var(--lineWidth));
+  height: var(--lineWidth);
+  background: var(--lineColor);
+  border-radius: 3em 3em 0 0;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(-1 * var(--lineWidth));
+  transition: width 0.2s ease-in, height 0.2s ease-in;
+}
+
+.mapWrapper .row .itemBar:hover .itemInfo:after {
+  width: calc(10 * var(--lineWidth));
+  height: var(--lineWidth);
+  transition: width 0.2s ease-in, height 0.2s ease-in;
+}
+
+/* Item Date */
+.mapWrapper .row .itemDate {
+  position: absolute;
+  width: 100%;
+  font-size: 1.25em;
+  top: var(--lineWidth);
+  text-align: center;
+  text-shadow: 1px 1px 2px black;
+}
+
+/* Additional styles for nth-child */
+.mapWrapper .row:nth-child(2n) .itemBar:first-child:after {
+  content: '';
+  position: absolute;
+  width: calc(var(--mapHeight) * var(--radius));
+  height: calc(2 * var(--mapHeight) - var(--lineWidth));
+  right: 100%;
+  top: 0;
+  border-radius: calc(2 * var(--mapHeight)) 0 0 calc(2 * var(--mapHeight));
+  border: var(--lineWidth) solid var(--lineColor);
+  border-right: none;
+}
+
+.mapWrapper .row:nth-child(2n + 1) .itemBar:last-child:after {
+  content: '';
+  position: absolute;
+  width: calc(var(--mapHeight) * var(--radius));
+  height: calc(2 * var(--mapHeight) - var(--lineWidth));
+  left: 100%;
+  top: 0;
+  border-radius: 0 calc(2 * var(--mapHeight)) calc(2 * var(--mapHeight)) 0;
+  border: var(--lineWidth) solid var(--lineColor);
+  border-left: none;
+}
+
+/* Hide last child item bar after */
+.mapWrapper .row:last-child .itemBar:after {
+  display: none;
+}

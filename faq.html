@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read more...</title>
+    <link rel="stylesheet" href="assets/styles.css">
+  <link rel="icon" href="assets/img/hackify-favicon.png" type="image/x-icon">
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Hind:300,400&display=swap');
+
+/* $bg: #fff;
+$text: #7288a2;
+$gray: #4d5974;
+$lightgray: #e5e5e5;
+$blue: #03b5d2; */
+
+* {
+  box-sizing: border-box;
+  &::before, &::after {
+    box-sizing: border-box;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Hind', sans-serif;
+  background: #000;
+  color: #4d5974;
+  display: flex;
+  min-height: 100vh;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 4rem;
+  width: 48rem;
+}
+
+.accordion {
+  .accordion-item {
+    border-bottom: 1px solid #e5e5e5;
+    button[aria-expanded='true'] {
+      border-bottom: 1px solid #03b5d2;
+    }
+  }
+  button {
+    position: relative;
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding: 1em 0;
+    color: #7288a2;
+    font-size: 1.15rem;
+    font-weight: 400;
+    border: none;
+    background: none;
+    outline: none;
+    &:hover, &:focus {
+      cursor: pointer;
+      color: #03b5d2;
+      &::after {
+        cursor: pointer;
+        color: #03b5d2;
+        border: 1px solid #03b5d2;
+      }
+    }
+    .accordion-title {
+      padding: 1em 1.5em 1em 0;
+    }
+    .icon {
+      display: inline-block;
+      position: absolute;
+      top: 18px;
+      right: 0;
+      width: 22px;
+      height: 22px;
+      border: 1px solid;
+      border-radius: 22px;
+      &::before {
+        display: block;
+        position: absolute;
+        content: '';
+        top: 9px;
+        left: 5px;
+        width: 10px;
+        height: 2px;
+        background: currentColor;
+      }
+      &::after {
+        display: block;
+        position: absolute;
+        content: '';
+        top: 5px;
+        left: 9px;
+        width: 2px;
+        height: 10px;
+        background: currentColor;
+      }
+    }
+  }
+  button[aria-expanded='true'] {
+    color: #03b5d2;
+    .icon {
+      &::after {
+        width: 0;
+      }
+    }
+    + .accordion-content {
+      opacity: 1;
+      max-height: 22em;
+      transition: all 200ms linear;
+      will-change: opacity, max-height;
+    }
+  }
+  .accordion-content {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 200ms linear, max-height 200ms linear;
+    will-change: opacity, max-height;
+    p {
+      font-size: 1rem;
+      font-weight: 300;
+      margin: 2em 0;
+    }
+  }
+}
+    </style>
+    <div class="container">
+        <div >
+            <h2 style="text-align: center;">Frequently Asked Questions</h2>
+            <div class="accordion">
+              <div class="accordion-item">
+                <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title" >How many members should a team consist of?</span><span class="icon" aria-hidden="true"></span></button>
+                <div class="accordion-content">
+                  <p>2-4 members</p>
+                  
+                </div>
+              </div> 
+                  
+              <div >
+                <div class="accordion">
+                  <div class="accordion-item">
+                    <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title" >What is the format of the abstract?</span><span class="icon" aria-hidden="true"></span></button>
+                    <div class="accordion-content">
+                      <p>Abstracts should be no more than 300 words and should clearly outline:<br>
+                        ●	Team name<br>
+                        ●	Proposed solution and its alignment with the SDG theme<br>
+                        ●	Skills and experience of team members<br>
+                        ●	Expected deliverables<br>
+                        </p>
+                    </div>
+                  </div> 
+
+                  <div >
+                    <div class="accordion">
+                      <div class="accordion-item">
+                        <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title" >What is the selection criteria?</span><span class="icon" aria-hidden="true"></span></button>
+                        <div class="accordion-content">
+                          <p>A selection committee will review all submitted abstracts based on:<br>
+                            ●	Creativity and innovation of the proposed solution<br>
+                            ●	Relevance to the hackathon theme and SDGs<br>
+                            ●	Feasibility of developing a prototype within the timeframe<br>
+                            ●	Team composition and skillset<br>
+                            </p>
+                        </div>
+                      </div>
+
+                      <div >
+                        <div class="accordion">
+                          <div class="accordion-item">
+                            <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title" >What is the judging criteria?</span><span class="icon" aria-hidden="true"></span></button>
+                            <div class="accordion-content">
+                              <p>A distinguished panel of judges comprising industry experts, academics, and entrepreneurs will evaluate the final projects. Their decision will be final. Projects will be evaluated based on a predefined set of criteria, with equal weightage given to:<br>
+                                ●	Business Plan: Clarity, feasibility, and scalability of the proposed solution.<br>
+                                ●	Prototype Development: Functionality, user interface, and adherence to the theme.<br>
+                                ●	Product Management Skills: Teamwork, communication, and presentation of the project.<br>
+                                ●	Social Impact: Potential of the solution to address the chosen SDG and contribute to a sustainable future.<br>
+                                </p>
+                            </div>
+                          </div>
+
+
+                          <div >
+                            <div class="accordion">
+                              <div class="accordion-item">
+                                <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title" >What is the prize pool?</span><span class="icon" aria-hidden="true"></span></button>
+                                <div class="accordion-content">
+                                  <p>
+                                    1,00,000
+                                 </p>
+                                </div>
+                              </div>
+          
+    </div>
+    <script>
+        const items = document.querySelectorAll(".accordion button");
+      
+      function toggleAccordion() {
+        const itemToggle = this.getAttribute('aria-expanded');
+        
+        for (i = 0; i < items.length; i++) {
+          items[i].setAttribute('aria-expanded', 'false');
+        }
+        
+        if (itemToggle == 'false') {
+          this.setAttribute('aria-expanded', 'true');
+        }
+      }
+      items.forEach(item => item.addEventListener('click', toggleAccordion));
+      </script>
+</body>
+</html>
