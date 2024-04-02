@@ -5,9 +5,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="HTML5 website template">
-  <meta name="keywords" content="global, template, html, sass, jquery">
-  <meta name="author" content="Bucky Maler">
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/styles.css">
   <link rel="icon" href="assets/img/hackify-favicon.png" type="image/x-icon">
@@ -53,10 +50,12 @@
               <div class="intro--banner">
                 <h1>Your next<br>Big<br>experience<br></h1>
                 <span>"Fostering Innovation for a Sustainable Future"<br><br></span>
-                <button> 
-                  <a href="https://devfolio.co/discover" style="color: azure;">REGISTER HERE</a>
-                  <span class="btn-background"></span>
-                </button>
+                <div 
+                class="apply-button" 
+                data-hackathon-slug="hacikfy" 
+                data-button-theme="light"
+                style="height: 44px; width: 312px"
+                ></div>
                 <img src="assets/img/Project3.gif" alt="Welcome" style="max-width: 100%; max-height: 100%; margin-left: auto; position: absolute;right: 20px; top: 50px;">
               </div>
               <div class="intro--options">
@@ -426,6 +425,7 @@ items.forEach(item => item.addEventListener('click', toggleAccordion));
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
 <script src="assets/js/functions-min.js"></script>
+<script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
 </body>
 </html>
 
