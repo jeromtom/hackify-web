@@ -31,7 +31,7 @@ body {
 .mapWrapper .row {
   position: relative;
   width: 100%;
-  height: calc(2 * var(--mapHeight));
+  height: calc(2.85 * var(--mapHeight));
 }
 
 /* Item Bars */
