@@ -3,11 +3,49 @@
 <head>
   <title>Hackify</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/styles.css">
   <link rel="icon" href="assets/img/hackify-favicon.png" type="image/x-icon">
+  <style>
+    /* Add responsive styles here */
+    @media (max-width: 767px) {
+      .intro--banner img {
+        display: none;
+      }
+      .intro--banner h1 {
+        font-size: 2rem;
+      }
+      .intro--banner span {
+        font-size: 1rem;
+      }
+      .work--lockup .slider {
+        flex-direction: column;
+      }
+      .slider--item {
+        width: 100%;
+      }
+      .about--banner img {
+        display: none;
+      }
+      .contact--lockup {
+        flex-direction: column;
+      }
+      .modal {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+      .time-line {
+        width: 100%;
+        padding: 1rem;
+      }
+      .container-a {
+        width: 100%;
+        padding: 0.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -19,7 +57,6 @@
   </a>
   <p class="device-notification--message">about</p>
 </div>
-
 <div class="perspective effect-rotate-left">
   <div class="container"><div class="outer-nav--return"></div>
     <div id="viewport" class="l-viewport">
@@ -433,3 +470,5 @@ items.forEach(item => item.addEventListener('click', toggleAccordion));
 
 
 
+
+<!-- Rest of the code remains the same -->
